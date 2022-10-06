@@ -20,8 +20,11 @@
           ></app-input-bank-code>
         </div>
         <div fxLayout="row">
-          <label fxFlex="20%">Adresse</label>
-          <app-input-address></app-input-address>
+          <label fxFlex="20%">Address</label>
+          <app-input-address
+            formControlName="address"
+            fxFlex="auto"
+          ></app-input-address>
         </div>
         <div>
           <pre fxFlex="auto">{{ form.valueChanges | async | json }}</pre>

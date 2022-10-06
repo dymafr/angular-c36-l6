@@ -1,0 +1,23 @@
+<div [class.disabled]="isDisabled" fxLayout="column" fxLayoutGap="15px">
+  <div fxLayout="row" fxLayoutGap="15px">
+    <input
+      fxFlex="auto"
+      [(ngModel)]="innerValue"
+      disabled
+      type="text"
+      placeholder="tape code"
+    />
+    <button (click)="reset()">x</button>
+  </div>
+  <div fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="start center">
+    <div
+      (click)="update(i)"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      class="block"
+      *ngFor="let i of arr"
+    >
+      <span>{{ i }}</span>
+    </div>
+  </div>
+</div>

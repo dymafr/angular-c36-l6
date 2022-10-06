@@ -1,0 +1,32 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+  <div class="content">
+    <h1>Formulaire</h1>
+    <div fxLayout="row" fxLayoutGap="25px">
+      <form
+        [formGroup]="form"
+        fxLayout="column"
+        fxLayoutGap="30px"
+        fxFlex="100%"
+      >
+        <div fxLayout="row">
+          <label fxFlex="20%">Name</label>
+          <input fxFlex="auto" formControlName="name" type="text" />
+        </div>
+        <div fxLayout="row">
+          <label fxFlex="20%">Code</label>
+          <app-input-bank-code
+            formControlName="code"
+            fxFlex="auto"
+          ></app-input-bank-code>
+        </div>
+        <div fxLayout="row">
+          <label fxFlex="20%">Adresse</label>
+          <app-input-address></app-input-address>
+        </div>
+        <div>
+          <pre fxFlex="auto">{{ form.valueChanges | async | json }}</pre>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+input {
+  padding: 5px 15px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.block {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.4;
+}
